@@ -142,9 +142,18 @@
 
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 677px) {
+        .slider-container {
+            padding: 0.5rem;
+        }
+
         .mem {
             align-items: center;
+        }
+
+        .mem-desc {
+            font-size: 1rem;
+            margin-top: 3rem;
         }
 
         .switcher {
