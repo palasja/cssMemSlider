@@ -142,6 +142,10 @@
 
     }
 
+    .switcher-btn:active {
+        transform: scale(0.8);
+    }
+
     @media screen and (max-width: 677px) {
         .slider-container {
             padding: 0.5rem;
