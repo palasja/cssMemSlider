@@ -116,7 +116,7 @@
 
     .switcher {
         margin-top: -2.6rem;
-        /* padding-right: 5rem; */
+        padding-right: 0.6rem;
         display: flex;
         gap: 1rem;
         justify-content: end;
@@ -157,14 +157,20 @@
 
         .mem-desc {
             font-size: 1rem;
-            margin-top: 3rem;
+            margin-top: 1rem;
+            padding-left: 0;
+        }
+
+        .switcher-btn {
+            width: 0.8rem;
+            height: 0.8rem;
         }
 
         .switcher {
             display: flex;
             gap: 1rem;
-            margin-bottom: 3rem;
+            margin-bottom: 1rem;
             justify-content: center;
-            margin-top: -5rem;
+            margin-top: -3rem;
         }
     }
