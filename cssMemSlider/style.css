@@ -136,13 +136,13 @@
         box-sizing: border-box;
     }
 
-    .switcher-btn:hover {
+    .switcher-label:hover .switcher-btn {
         background-color: rgb(64, 165, 38);
         cursor: pointer;
 
     }
 
-    .switcher-btn:active {
+    .switcher-label:active .switcher-btn {
         transform: scale(0.8);
     }
 
