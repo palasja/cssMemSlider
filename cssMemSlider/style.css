@@ -94,7 +94,7 @@
     input[type="radio"]:checked:nth-child(4)~.slides .mem:nth-child(5) {
         order: 2;
         margin-left: -100%;
-        transition: margin 300ms;
+        transition: margin 200ms;
     }
 
     input[type="radio"]:checked:nth-child(1)~.slides .mem:nth-child(2) .mem-desc,
@@ -103,7 +103,7 @@
     input[type="radio"]:checked:nth-child(4)~.slides .mem:nth-child(5) .mem-desc {
         color: rgb(85, 85, 153);
         opacity: 1;
-        transition: opacity 1500ms;
+        transition: opacity 1000ms;
     }
 
     input:checked:nth-child(1)~.switcher>label:nth-child(1)>.switcher-btn,
