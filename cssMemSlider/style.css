@@ -62,7 +62,7 @@
     .mem-desc {
         text-align: left;
         padding-bottom: 0.8rem;
-        padding-left: 1rem;
+        /* padding-left: 1rem; */
         font-size: 2rem;
         opacity: 0;
     }
@@ -116,7 +116,7 @@
 
     .switcher {
         margin-top: -2.6rem;
-        padding-right: 0.6rem;
+        /* padding-right: 0.6rem; */
         display: flex;
         gap: 1rem;
         justify-content: end;
@@ -152,13 +152,13 @@
         }
 
         .mem {
-            align-items: center;
+            align-items: flex-start;
         }
 
         .mem-desc {
             font-size: 1rem;
             margin-top: 1rem;
-            padding-left: 0;
+            /* padding-left: 0; */
         }
 
         .switcher-btn {
