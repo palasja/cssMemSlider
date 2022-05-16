@@ -1,0 +1,176 @@
+    html,
+    body {
+        height: 100%;
+        margin: auto;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .slider-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        margin: auto;
+        padding: 2rem;
+        background-color: brown;
+        border-radius: 5%;
+    }
+
+    .slider {
+        width: 100%;
+        overflow: hidden;
+        background-color: aqua;
+    }
+
+    .slides {
+        display: flex;
+        height: inherit;
+    }
+
+    .slide {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-shrink: 0;
+        width: 100%;
+    }
+
+    .mem {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        flex-shrink: 0;
+        width: 100%;
+        margin: 0;
+    }
+
+    .mem-img {
+        width: 100%;
+    }
+
+    .mem img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .mem-desc {
+        text-align: left;
+        padding-bottom: 0.8rem;
+        /* padding-left: 1rem; */
+        font-size: 2rem;
+        opacity: 0;
+    }
+
+    .mem:nth-child(2) {
+        order: 3;
+
+    }
+
+    .mem:nth-child(3) {
+        order: 4;
+    }
+
+    .mem:nth-child(4) {
+        order: 5;
+    }
+
+    .mem:nth-child(5) {
+        order: 6;
+    }
+
+    input {
+        display: none;
+    }
+
+    input[type="radio"]:checked:nth-child(1)~.slides .mem:nth-child(2),
+    input[type="radio"]:checked:nth-child(2)~.slides .mem:nth-child(3),
+    input[type="radio"]:checked:nth-child(3)~.slides .mem:nth-child(4),
+    input[type="radio"]:checked:nth-child(4)~.slides .mem:nth-child(5) {
+        order: 2;
+        margin-left: -100%;
+        transition: margin 200ms;
+    }
+
+    input[type="radio"]:checked:nth-child(1)~.slides .mem:nth-child(2) .mem-desc,
+    input[type="radio"]:checked:nth-child(2)~.slides .mem:nth-child(3) .mem-desc,
+    input[type="radio"]:checked:nth-child(3)~.slides .mem:nth-child(4) .mem-desc,
+    input[type="radio"]:checked:nth-child(4)~.slides .mem:nth-child(5) .mem-desc {
+        color: rgb(85, 85, 153);
+        opacity: 1;
+        transition: opacity 1000ms;
+    }
+
+    input:checked:nth-child(1)~.switcher>label:nth-child(1)>.switcher-btn,
+    input:checked:nth-child(2)~.switcher>label:nth-child(2)>.switcher-btn,
+    input:checked:nth-child(3)~.switcher>label:nth-child(3)>.switcher-btn,
+    input:checked:nth-child(4)~.switcher>label:nth-child(4)>.switcher-btn {
+        border: 0.2rem solid rgb(26, 128, 1);
+        background-color: white !important;
+    }
+
+    .switcher {
+        margin-top: -2.6rem;
+        /* padding-right: 0.6rem; */
+        display: flex;
+        gap: 1rem;
+        justify-content: end;
+    }
+
+    .switcher-label {
+        padding: 0.4rem 0;
+        cursor: pointer;
+    }
+
+    .switcher-btn {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        border: none;
+        background-color: rgb(26, 128, 1);
+        box-sizing: border-box;
+    }
+
+    .switcher-label:hover .switcher-btn {
+        background-color: rgb(64, 165, 38);
+        cursor: pointer;
+
+    }
+
+    .switcher-label:active .switcher-btn {
+        transform: scale(0.8);
+    }
+
+    @media screen and (max-width: 677px) {
+        .slider-container {
+            padding: 0.5rem;
+        }
+
+        .mem {
+            align-items: flex-start;
+        }
+
+        .mem-desc {
+            font-size: 1rem;
+            margin-top: 1rem;
+            /* padding-left: 0; */
+        }
+
+        .switcher-btn {
+            width: 0.8rem;
+            height: 0.8rem;
+        }
+
+        .switcher {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            justify-content: center;
+            margin-top: -3rem;
+        }
+    }
